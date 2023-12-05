@@ -1,0 +1,47 @@
+# .gitignore for Python ML Project
+
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+
+# Compiled Python files
+*.pyc
+*.pyo
+*.pyd
+
+# Editor/IDE specific
+.idea/
+.vscode/
+
+# Data
+data/
+*.csv
+
+# Model files
+models/
+
+# Logs
+logs/
+
+# Output
+output/
+
+# Cache
+.cache/
+
+# Articles, .sources, and .source folders
+articles/
+sources.txt
+source.txt
+
+# Ignore your submission CSV
+submission.csv

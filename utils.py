@@ -383,7 +383,7 @@ def test(model, test_dataloader, emotions_dict, device, plot_misclassified=False
                     misclassified_images.append((inputs[mis_idx], labels[mis_idx], predicted[mis_idx]))
 
     # Classification Report
-    report = classification_report(all_labels, all_predictions, target_names=emotions_dict.values())
+    report = classification_report(all_labels, all_predictions, target_names=emotions_dict.values(), digits=4)
     print("\nClassification Report:\n")
     print(report)
 

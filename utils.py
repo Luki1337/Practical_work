@@ -223,7 +223,8 @@ def train(train_dataloader, valid_dataloader, model, criterion, optimizer, epoch
         train_correct = 0
         train_total = 0
 
-        for inputs, labels in tqdm(train_dataloader, desc="Training", position=0, leave=False):
+        for inputs, labels in tqdm(train_dataloader, desc="Training", 
+                                   position=0, leave=False):
             # Move inputs to the specified device
             inputs = inputs.float().to(device)
             labels = labels.squeeze().long().to(device)
@@ -399,6 +400,7 @@ def test(model, test_dataloader, emotions_dict, device, plot_misclassified=False
     plt.title("Confusion Matrix", fontsize=16)  # Increase title font size
     plt.xlabel("Predicted")
     plt.ylabel("True")
+    plt.savefig('confusion_matrix.png')  # Save the plot as a PNG file
     plt.show()
 
     # Add extra space
